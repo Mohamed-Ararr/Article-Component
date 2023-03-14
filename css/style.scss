@@ -1,0 +1,145 @@
+// - Very Dark Grayish Blue: hsl(217, 19%, 35%)
+// - Desaturated Dark Blue: hsl(214, 17%, 51%)
+// - Grayish Blue: hsl(212, 23%, 69%)
+// - Light Grayish Blue: hsl(210, 46%, 95%)
+// font-family: 'Manrope', sans-serif;
+
+$title-color: hsl(217, 19%, 35%);
+$screen-background-color: hsl(210, 46%, 95%);
+$card-background-color: white;
+$text-color: hsl(214, 17%, 51%);
+
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  text-transform: capitalize;
+  margin: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 0px 20px !important;
+    flex-direction: column;
+    height: 700px !important;
+    .image-holder {
+      img {
+        border-radius: 10px 10px 0 0 !important;
+      }
+    }
+    .social-media {
+      left: -50% !important;
+      ::after {
+        left: 70% !important;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $screen-background-color;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 275px;
+    background-color: $card-background-color;
+    border-radius: 15px;
+    .image-holder {
+      width: 100%;
+      height: 100%;
+      img {
+        border-radius: 15px 0 0 15px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .information {
+      padding: 20px 30px;
+      h3 {
+        color: $title-color;
+        line-height: 1.4;
+      }
+      & > p {
+        font-size: 0.8em;
+        line-height: 1.6;
+        color: $text-color;
+        margin: 15px 0 !important;
+      }
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .avatar-info {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          .avatar {
+            border-radius: 50%;
+            margin-right: 15px !important;
+            width: 50px;
+          }
+          .name-date {
+            p {
+              margin-bottom: 8px !important;
+              color: $title-color;
+              font-size: 0.8em;
+            }
+            span {
+              color: $text-color;
+              font-size: 0.85em;
+            }
+          }
+        }
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $screen-background-color;
+          position: relative;
+          .social-media {
+            position: absolute;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            display: none;
+            top: -100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 20px;
+            border-radius: 15px;
+            width: 200px;
+            background-color: $title-color;
+            ::after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              bottom: -50%;
+              left: 50%;
+              transform: translate(-50%, -25%);
+              border: 10px solid;
+              border-color: $title-color transparent transparent transparent;
+            }
+            span {
+              letter-spacing: 1px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              img {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  text-transform: capitalize;
+  margin: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 0px 20px !important;
+    flex-direction: column;
+    height: 700px !important;
+  }
+  .container .image-holder img {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  .container .social-media {
+    left: -50% !important;
+  }
+  .container .social-media ::after {
+    left: 70% !important;
+  }
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(210deg, 46%, 95%);
+}
+main .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 275px;
+  background-color: white;
+  border-radius: 15px;
+}
+main .container .image-holder {
+  width: 100%;
+  height: 100%;
+}
+main .container .image-holder img {
+  border-radius: 15px 0 0 15px;
+  width: 100%;
+  height: 100%;
+}
+main .container .information {
+  padding: 20px 30px;
+}
+main .container .information h3 {
+  color: hsl(217deg, 19%, 35%);
+  line-height: 1.4;
+}
+main .container .information > p {
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: hsl(214deg, 17%, 51%);
+  margin: 15px 0 !important;
+}
+main .container .information .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .container .information .profile .avatar-info {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+main .container .information .profile .avatar-info .avatar {
+  border-radius: 50%;
+  margin-right: 15px !important;
+  width: 50px;
+}
+main .container .information .profile .avatar-info .name-date p {
+  margin-bottom: 8px !important;
+  color: hsl(217deg, 19%, 35%);
+  font-size: 0.8em;
+}
+main .container .information .profile .avatar-info .name-date span {
+  color: hsl(214deg, 17%, 51%);
+  font-size: 0.85em;
+}
+main .container .information .profile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(210deg, 46%, 95%);
+  position: relative;
+}
+main .container .information .profile a .social-media {
+  position: absolute;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: none;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 20px;
+  border-radius: 15px;
+  width: 200px;
+  background-color: hsl(217deg, 19%, 35%);
+}
+main .container .information .profile a .social-media ::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  border: 10px solid;
+  border-color: hsl(217deg, 19%, 35%) transparent transparent transparent;
+}
+main .container .information .profile a .social-media span {
+  letter-spacing: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .container .information .profile a .social-media span img {
+  width: 15px;
+  height: 15px;
+}
