@@ -24,9 +24,11 @@ window.onload = function () {
     } else {
       if (!isVisible) {
         socialMediaBox.style.display = "block";
+        shareButton.style.backgroundColor = "hsl(210, 46%, 95%)";
         isVisible = !isVisible;
       } else {
         socialMediaBox.style.display = "none";
+        shareButton.style.backgroundColor = "hsl(210, 46%, 95%)";
         isVisible = !isVisible;
       }
     }
