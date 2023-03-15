@@ -6,7 +6,6 @@ window.onload = function () {
 
   window.onresize = function () {
     screenWidth = window.innerWidth;
-    console.log(screenWidth);
   };
 
   shareButton.addEventListener("click", function (event) {
