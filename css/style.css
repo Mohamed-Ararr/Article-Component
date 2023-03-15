@@ -5,20 +5,38 @@
   margin: 0 !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 560px) {
   .container {
-    margin: 0px 20px !important;
     flex-direction: column;
-    height: 700px !important;
+    height: 500px !important;
+    width: 300px !important;
   }
   .container .image-holder img {
     border-radius: 10px 10px 0 0 !important;
   }
-  .container .social-media {
-    left: -50% !important;
+  .container .information h3 {
+    font-size: 0.9em !important;
   }
-  .container .social-media ::after {
-    left: 70% !important;
+  .container .information > p {
+    font-size: 0.7em !important;
+  }
+  .container .information .profile a {
+    z-index: 50 !important;
+  }
+  .container .button-holder .social-media {
+    z-index: 0;
+    bottom: 25% !important;
+    transform: translate(0, 88%) !important;
+    right: 0;
+    height: 50px;
+    width: 100% !important;
+  }
+  .container .button-holder .social-media span {
+    justify-content: start !important;
+    gap: 20px;
+  }
+  .container .button-holder .social-media ::after {
+    display: none;
   }
 }
 main {
@@ -36,6 +54,7 @@ main .container {
   height: 275px;
   background-color: white;
   border-radius: 15px;
+  margin: 20px !important;
 }
 main .container .image-holder {
   width: 100%;
@@ -47,6 +66,7 @@ main .container .image-holder img {
   height: 100%;
 }
 main .container .information {
+  position: relative;
   padding: 20px 30px;
 }
 main .container .information h3 {
@@ -91,21 +111,20 @@ main .container .information .profile a {
   height: 40px;
   border-radius: 50%;
   background-color: hsl(210deg, 46%, 95%);
-  position: relative;
 }
-main .container .information .profile a .social-media {
+main .container .information .button-holder .social-media {
   position: absolute;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: none;
-  top: -100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 30%;
+  right: 0;
+  transform: translate(25%, 0);
   padding: 15px 20px;
   border-radius: 15px;
   width: 200px;
   background-color: hsl(217deg, 19%, 35%);
 }
-main .container .information .profile a .social-media ::after {
+main .container .information .button-holder .social-media ::after {
   content: "";
   position: absolute;
   width: 0;
@@ -116,14 +135,14 @@ main .container .information .profile a .social-media ::after {
   border: 10px solid;
   border-color: hsl(217deg, 19%, 35%) transparent transparent transparent;
 }
-main .container .information .profile a .social-media span {
+main .container .information .button-holder .social-media span {
   letter-spacing: 1px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .container .information .profile a .social-media span img {
+main .container .information .button-holder .social-media span img {
   width: 15px;
   height: 15px;
 }
